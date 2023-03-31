@@ -4,7 +4,7 @@ import messaging, {
 import database from '@react-native-firebase/database';
 import DeviceInfo from 'react-native-device-info';
 import notifee from '@notifee/react-native';
-import RNCallKeep from 'react-native-callkeep';
+// import RNCallKeep from 'react-native-callkeep';
 import {PermissionsAndroid} from 'react-native';
 
 const ref = database().ref('/fcmtokens');
@@ -48,6 +48,7 @@ export const onNotification = () => {
       //   'number',
       //   false,
       // );
+      // @ts-ignore
       await notifee.displayNotification(message.notification);
     }
   };
@@ -75,14 +76,14 @@ const options = {
   },
 };
 
-RNCallKeep.setup(options).then(accepted => {});
-
-RNCallKeep.getInitialEvents().then();
-RNCallKeep.setAvailable(true);
-
-RNCallKeep.setForegroundServiceSettings({
-  channelId: 'com.company.my',
-  channelName: 'Foreground service for my app',
-  notificationTitle: 'My app is running on background',
-  notificationIcon: 'Path to the resource icon of the notification',
-});
+// RNCallKeep.setup(options).then(accepted => {});
+//
+// RNCallKeep.getInitialEvents().then();
+// RNCallKeep.setAvailable(true);
+//
+// RNCallKeep.setForegroundServiceSettings({
+//   channelId: 'com.company.my',
+//   channelName: 'Foreground service for my app',
+//   notificationTitle: 'My app is running on background',
+//   notificationIcon: 'Path to the resource icon of the notification',
+// });

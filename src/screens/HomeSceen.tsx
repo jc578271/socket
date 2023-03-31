@@ -3,7 +3,7 @@ import {memoForwardRef} from '@true/utils';
 import {ScreenWrapper, UIFlashList} from '@true/components';
 import {DynamicHeader} from '@true/components/Header/DynamicHeader';
 import {Text, TextInput, View} from 'react-native';
-import {socket, useSocket} from '@/components/SocketProvider';
+import { useSocket} from '@/components/SocketProvider';
 import Animated, {
   runOnJS,
   useAnimatedProps,
@@ -17,9 +17,9 @@ import {interactManager} from '@true/utils/wait';
 import {UIButton} from '@true/components/UIButton';
 import {socketEmit} from '@/components/SocketProvider/utils';
 import {styled} from '@true/global';
-import RNCallKeep from 'react-native-callkeep';
-import 'react-native-get-random-values';
-import {v4} from 'uuid';
+// import RNCallKeep from 'react-native-callkeep';
+// import 'react-native-get-random-values';
+// import {v4} from 'uuid';
 
 // const socket = io("http://192.168.1.9:3000")
 
